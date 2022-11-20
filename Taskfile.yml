@@ -1,0 +1,14 @@
+version: "3"
+env:
+  PULUMI_PROJECT: "Bajica"
+  PULUMI_STACK: "Nenadic"
+tasks:
+  default:
+    cmds:
+    - go run main.go
+  browser:
+    cmds:
+    - open -a Firefox "localhost:8080"
+  login:
+    cmds:
+    - pulumi login "azblob://state?storage_account=bajicanenadic"
